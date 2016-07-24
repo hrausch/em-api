@@ -1,4 +1,4 @@
-package br.cefetmg.em.repository;
+package br.cefetmg.em.domain.repository;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.cefetmg.em.model.User;
-import br.cefetmg.em.model.UserRoles;
+import br.cefetmg.em.domain.User;
+import br.cefetmg.em.domain.UserRoles;
 
 
 @Repository

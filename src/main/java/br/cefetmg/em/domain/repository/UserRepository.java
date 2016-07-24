@@ -1,9 +1,9 @@
-package br.cefetmg.em.repository;
+package br.cefetmg.em.domain.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import br.cefetmg.em.model.User;
+import br.cefetmg.em.domain.User;
 
 
 @RepositoryRestResource(collectionResourceRel = "user", path = "user")

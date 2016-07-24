@@ -1,4 +1,4 @@
-package br.cefetmg.em.model;
+package br.cefetmg.em.domain;
 
 import static javax.persistence.GenerationType.IDENTITY;
 

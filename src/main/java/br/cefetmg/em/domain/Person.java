@@ -1,4 +1,4 @@
-package br.cefetmg.em.model;
+package br.cefetmg.em.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
