@@ -3,7 +3,7 @@ package br.cefetmg.em.domain;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class CourseGrade implements Serializable {
+public class ClassGrade implements Serializable {
 	
 	/**
 	 * 
@@ -21,7 +21,7 @@ public class CourseGrade implements Serializable {
 	private int ano;
 	private float notaMediaSala;
 	private float desvioMediaSala;
-	private Course course;
+	private Classs classs;
 	
 	
 	
@@ -35,12 +35,12 @@ public class CourseGrade implements Serializable {
 	}
 
 	
-	public Course getCourse() {
-		return course;
+	public Classs getClasss() {
+		return classs;
 	}
 
-	public void setCourse(Course course) {
-		this.course = course;
+	public void setClasss(Classs course) {
+		this.classs = course;
 	}
 
 	public void setAlertaSinal(int alertaSinal) {

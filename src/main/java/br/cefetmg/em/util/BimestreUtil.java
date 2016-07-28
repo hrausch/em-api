@@ -2,9 +2,11 @@ package br.cefetmg.em.util;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Component;
+
 import br.cefetmg.em.domain.Bimestre;
 
-
+@Component
 public class BimestreUtil {
 	
 

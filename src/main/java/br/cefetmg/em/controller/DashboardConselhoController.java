@@ -20,7 +20,11 @@ public class DashboardConselhoController {
 
     @RequestMapping("/lostgrades")
     public ArrayList<Map<String,String>> getCourseGrades() {
-		System.out.println("servico requisitado");
-    	return cgService.findNumberLostGradesPerCourse(2, 1, 2015);
+    	return cgService.findNumberLostGradesPerClass(2, 1, 2, 2015);
+    }
+    
+    @RequestMapping("/averagesgrades")
+    public ArrayList<Map<String,String>> getCourseAveragesGrades() {
+    	return cgService.findClassAveragesGrades(2, 1, 2015);
     }
 }

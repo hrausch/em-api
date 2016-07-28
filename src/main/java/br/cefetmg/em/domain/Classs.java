@@ -9,7 +9,7 @@ import javax.persistence.*;
  * 
  */
 
-public class Course implements Serializable {
+public class Classs implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -24,7 +24,7 @@ public class Course implements Serializable {
 	@Column(name="nome_disciplina")
 	private String nomeDisciplina;
 
-	public Course() {
+	public Classs() {
 	}
 
 	public int getIdDisciplina() {
