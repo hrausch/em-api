@@ -35,8 +35,6 @@ public class CourseGradeService {
 		
 	}
 	
-	
-	
 	public ArrayList<Map<String,String>> findNumberLostGradesPerClass(long idCurso, long idTurma, int bimestre, int ano){
 		
 	

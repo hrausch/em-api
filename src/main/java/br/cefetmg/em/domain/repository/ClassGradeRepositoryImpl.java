@@ -21,6 +21,29 @@ public class ClassGradeRepositoryImpl implements ClassGradeRepositoryCustom {
 	@Autowired
     JdbcTemplate jdbcTemplate;
 	
+	/**
+	 * Bimestre bimestreSelecionado = BimestreUtil.getBimestres().get(bimestre);
+	 * 
+	 * String sql = "select MIN(fn.nota) AS menor_nota, AVG(fn.nota) AS media_nota, stddev(fn.nota) AS desvio_padrao,"
+					+ " a.id_aluno, a.nome, a.matricula, a.foto, "
+					+ "(SELECT COUNT(id_disciplina) FROM fato_notas fn2 WHERE fn2.bimestre=fn.bimestre AND fn2.id_curso=fn.id_curso"
+					+ " AND fn2.id_turma=fn.id_turma AND fn2.ano=fn.ano AND fn2.id_aluno=a.id_aluno AND nota < ? ) AS medias_perdidas,"
+					+ "(SELECT COUNT(id_aluno_comentario) FROM aluno_comentario ac WHERE ac.id_aluno=a.id_aluno) AS num_comentarios"
+					+ " from aluno a "
+					+ " JOIN fato_notas fn ON fn.id_aluno = a.id_aluno "
+					+ " WHERE fn.bimestre=? AND fn.id_curso=? AND fn.id_turma=? AND fn.ano=? "
+					+ " GROUP BY a.id_aluno, a.nome, a.matricula, a.foto ORDER BY medias_perdidas DESC, a.nome ASC ";
+			
+			PreparedStatement stmt = (PreparedStatement) con
+					.prepareStatement(sql);
+			
+			stmt.setLong(1, bimestreSelecionado.getMedia());
+			stmt.setLong(2, bimestreSelecionado.getIdBimestre());
+			stmt.setLong(3, idCurso);
+			stmt.setLong(4, idTurma);
+			stmt.setInt(5, ano);
+	 */
+	
 	public List<ClassGrade> findClassGrades(long idCurso, long idTurma, int ano){
 		
 		

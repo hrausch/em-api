@@ -13,7 +13,7 @@ public interface ClassGradeRepositoryCustom {
 	
 	
 	public List<ClassGrade> findClassGrades(long idCurso, long idTurma, int ano);
-	
+		
 	public int findLostGradesByClass(long idDisciplina, long idTurma, int ano, long idCurso, ArrayList<Bimestre> bimestres, int limiteMedia);
 
 }
