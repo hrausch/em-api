@@ -1,0 +1,21 @@
+* {
+background:transparent !important;
+color:#000 !important;
+text-shadow:none !important;
+filter:none !important;
+-ms-filter:none !important;
+}
+ 
+body {
+margin:0;
+padding-top: -90px;
+line-height: 1.4em;
+}
+
+nav, footer, video, audio, object, embed { 
+display:none; 
+}
+ 
+.no-print { 
+display:none; 
+}
